@@ -174,3 +174,29 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+.check {
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  font-weight: bold;
+  padding: 10px 0 10px 10px;
+  background: linear-gradient(
+    to right,
+    #bf953f,
+    #fcf6ba,
+    #b38728,
+    #fbf5b7,
+    #aa771c
+  );
+  text-shadow: -1px -1px #eee, 1px 1px #eee;
+  color: #222;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 2px #bf953f;
+  font-size: 2rem;
+  font-family: inherit;
+  cursor: pointer;
+}
