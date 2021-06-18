@@ -6,19 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess The Number!</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/style.css" />
   </head>
-  <body>
+  <body id="victory">
     <header>
       <h1>Guess The Number!</h1>
       <p class="between">Between(1 and 100)</p>
       <button class="btn again">Again!</button>
-      <div class="number">?</div>
+      <div class="number" id="secret">?</div>
     </header>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <iframe
+          src="https://giphy.com/embed/Ju7l5y9osyymQ"
+          width="480"
+          height="360"
+          frameborder="0"
+          class="giphy-embed"
+          allowfullscreen
+        ></iframe>
+        <span class="close">&times;</span>
+      </div>
+    </div>
+
     <main>
+      <div class="modal-button" id="show-reward">
+        <button class="reward-button" id="reward">REWARD!!</button>
+      </div>
       <section class="left">
-        <input type="number" class="guess" />
-        <button class="check">Check!</button>
+        <input type="number" class="guess" min="1" max="100" />
+        <button class="check" id="replay">Check!</button>
       </section>
       <section class="right">
         <div class="displayMessages">
@@ -28,12 +46,12 @@
             <p class="colder-message">Colder ❄</p>
           </div>
         </div>
-        <p class="label-score">💯 Score: <span class="score">0</span></p>
+        <p class="label-score">💯 Score: <span class="score">25</span></p>
         <p class="label-highscore">
           🥇 Highscore: <span class="highscore">0</span>
         </p>
       </section>
     </main>
-    <script src="script.js"></script>
+    <script src="src/script.js"></script>
   </body>
 </html>
