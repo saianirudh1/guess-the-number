@@ -8,17 +8,26 @@
     <link rel="shortcut icon" href="icons/favicon.ico" />
     <link rel="stylesheet" href="src/style.css" />
   </head>
-  <body>
+  <body id="victory">
     <header>
       <h1>Guess The Number!</h1>
       <p class="between">Between(1 and 100)</p>
       <button class="btn again">Again!</button>
-      <div class="number">?</div>
+      <div class="number" id="secret">?</div>
+      <!-- <button class="modal-button">REWARD!!</button> -->
     </header>
+
+    <!-- <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div> -->
+
     <main>
       <section class="left">
         <input type="number" class="guess" min="1" max="100" />
-        <button class="check">Check!</button>
+        <button class="check" id="replay">Check!</button>
       </section>
       <section class="right">
         <div class="displayMessages">
