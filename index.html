@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess The Number!</title>
     <link rel="shortcut icon" href="icons/favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <header>
@@ -17,7 +17,7 @@
     </header>
     <main>
       <section class="left">
-        <input type="number" class="guess" />
+        <input type="number" class="guess" min="1" max="100" />
         <button class="check">Check!</button>
       </section>
       <section class="right">
@@ -28,12 +28,12 @@
             <p class="colder-message">Colder ❄</p>
           </div>
         </div>
-        <p class="label-score">💯 Score: <span class="score">0</span></p>
+        <p class="label-score">💯 Score: <span class="score">50</span></p>
         <p class="label-highscore">
           🥇 Highscore: <span class="highscore">0</span>
         </p>
       </section>
     </main>
-    <script src="script.js"></script>
+    <script src="src/script.js"></script>
   </body>
 </html>
