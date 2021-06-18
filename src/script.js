@@ -72,6 +72,7 @@ const animateLoss = function () {
   num.style.transition = "width 0.5s";
   num.style.width = "20rem";
 
+  displayText("Game Over! Try Again");
   document.querySelector(".number").textContent = secretNumber;
 };
 
@@ -113,11 +114,6 @@ let prevGuess = 0,
 hideHotterColder();
 
 document.querySelector(".check").addEventListener("click", function () {
-  if (score === 1) {
-    animateLoss();
-    document.getElementById("replay").disabled = true;
-  }
-
   const guess = Number(document.querySelector(".guess").value);
 
   if (!guess) {
@@ -155,6 +151,11 @@ document.querySelector(".check").addEventListener("click", function () {
 
     prevGuess = guess;
     changeScore();
+
+    if (score === 1) {
+      animateLoss();
+      document.getElementById("replay").disabled = true;
+    }
   }
 });
 
@@ -164,7 +165,7 @@ document.querySelector(".again").addEventListener("click", function () {
 
   displayText("Start Guessing...");
 
-  score = 50;
+  score = 25;
   changeScore();
 
   resetGame();
