@@ -44,6 +44,22 @@ const animateVictory = function () {
   num.style.width = "40rem";
 
   document.querySelector(".number").textContent = secretNumber;
+
+  let rewardDiv = document.getElementById("show-reward");
+  rewardDiv.style.transition = "display ease in";
+  rewardDiv.style.display = "inline-block";
+
+  bodybg.style.color = "var(--clr--primary)";
+  document.querySelector(".message").style.color = "var(--clr--primary)";
+
+  document.querySelector(".label-score").style.color = "var(--clr--primary)";
+
+  document.querySelector(".label-highscore").style.color =
+    "var(--clr--primary)";
+
+  document.querySelector(".guess").style.color = "var(--clr--primary)";
+
+  document.querySelector(".guess").style.borderColor = "var(--clr--primary)";
 };
 
 const animateLoss = function () {
@@ -69,18 +85,29 @@ const resetGame = function () {
   num.style.transition = "width 0.5s";
   num.style.width = "20rem";
 
-  //   document.querySelector(".number").textContent = "?";
+  document.querySelector(".number").textContent = "?";
+
+  bodybg.style.color = "var(--clr-basic)";
+  document.querySelector(".message").style.color = "var(--clr-basic)";
+
+  document.querySelector(".label-score").style.color = "var(--clr-basic)";
+
+  document.querySelector(".label-highscore").style.color = "var(--clr-basic)";
+
+  document.querySelector(".guess").style.color = "var(--clr-basic)";
+
+  document.querySelector(".guess").style.borderColor = "var(--clr-basic)";
 };
 
 // Variables
 let secretNumber = generateRandom();
 let highScore = 0,
-  score = 50;
+  score = 25;
 let prevGuess = 0,
   prevDiff = 0,
   count = 0;
 
-document.querySelector(".number").textContent = secretNumber;
+// document.querySelector(".number").textContent = secretNumber;
 
 // Game Logic
 hideHotterColder();
@@ -123,6 +150,7 @@ document.querySelector(".check").addEventListener("click", function () {
       }
 
       animateVictory();
+      document.getElementById("replay").disabled = true;
     }
 
     prevGuess = guess;
@@ -143,7 +171,13 @@ document.querySelector(".again").addEventListener("click", function () {
 
   document.getElementById("replay").disabled = false;
 
+  let rewardDiv = document.getElementById("show-reward");
+
+  rewardDiv.style.display = "none";
+
   document.querySelector(".guess").value = "";
+
+  hideHotterColder();
 });
 
 // Modal
@@ -151,16 +185,12 @@ let modal = document.getElementById("myModal");
 
 let span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function () {};
+let reward = document.getElementById("reward");
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
+reward.onclick = function () {
+  modal.style.display = "block";
 };
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+span.onclick = function () {
+  modal.style.display = "none";
 };
