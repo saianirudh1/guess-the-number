@@ -1,5 +1,6 @@
 # guess-the-number
 A simple game I built using HTML/CSS/JavaScript.
+Play the game here: https://saianirudh1.github.io/guess-the-number/
 
 ## Rules
 Guess any number between 1 and 100
