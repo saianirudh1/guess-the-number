@@ -1,5 +1,5 @@
 # guess-the-number
-A simple game I built using HTML/CSS/JavaScript.
+A simple game where you guess the hidden number to get rewarded with an amazing meme.
 
 Play the game here: https://saianirudh1.github.io/guess-the-number/
 
@@ -10,3 +10,8 @@ Based on the input there will be 2 messages.
   2. Hotter/colder 
 Continue guessing until you get the right number.
 Guess the right number and get rewarded with a meme.
+
+### Built using:
+* HTML
+* CSS
+* Javascript
